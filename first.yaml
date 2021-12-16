@@ -1,0 +1,11 @@
+---
+- host: localhost
+
+- tasks:
+    - name: ping
+      ansible.builtin.ping:
+      register: ping_status
+    
+    - name: printing the output
+      debug:
+        ping_status
